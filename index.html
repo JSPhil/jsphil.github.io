@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="System" http-equiv="System" />
+<title>Fahrplan Auswahl</title>
+<link href="./favicon.png" rel="shortcut icon" type="image/x-icon" />
+<style type="text/css">
+.schrift-mitte {
+	text-align: center;
+}
+.sch-groß {
+	font-size: x-large;
+	text-align: center;
+	color: #FFFF00;
+}
+.uberschrift {
+	font-size: xx-large;
+	text-align: center;
+	font-family: "MV Boli";
+	text-align: center;
+	color: #FF0000;
+}
+.auswahl {
+	font-size: x-large;
+	text-align: center;
+}
+</style>
+<body style="background-image: url('flagge.png'); background-color: #FFFFFF; background: url('windows-xp.jpg'); " onload="startTime()">
+<div id="txt"></div>
+<hr />
+<p><strong class="uberschrift"><span>Auswahl</span></strong> </p>
+<hr />
+<form name="form">
+	<p>
+	<select class="auswahl" name="link" onchange="window.location.href = document.form.link.options[document.form.link.selectedIndex].value;" size="1" style="width: 100%">
+	<option selected="selected">Bitte Seite auswählen</option>
+	<option value="/datei.html">Downlode</option>
+	<option value="/fahrplan.html">Fahrplan-Auswahl</option>
+	</select></p>
+</form>
+<hr /> 
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('uhr').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+<div id="uhr"></div><hr />
+</body>
+</html>

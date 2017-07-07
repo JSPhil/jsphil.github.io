@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="System" http-equiv="System" />
+<title>Fahrplan Auswahl</title>
+<style type="text/css">
+.schrift-mitte {
+	text-align: center;
+}
+.überrschr {
+	text-align: center;
+	font-family: "Segoe Script";
+}
+.sch-groß {
+	font-size: x-large;
+}
+.hina {
+	margin-left: 400px;
+}
+</style>
+<meta content="Admin" name="Philipp" />
+</head>
+
+<body style="background-image: url('../railjet_1.jpg'); color: #FFF666;">
+
+<hr />
+<p class="überrschr"><strong><span class="sch-groß">Fahrplan Auswahl</span></strong>
+</p>
+<hr />
+<form name="form">
+	<p class="hina">&nbsp;<select class="sch-groß" name="link" onchange="window.location.href = document.form.link.options[document.form.link.selectedIndex].value;" size="1" style="width: 424px">
+	<option value="/ibk-hbf.html">
+	Innsbruck Hauptbahnhof</option>
+	<option value="/ibk-west.html">
+	Innsbruck Westbahnhof</option>
+	<option value="/barwies.html">
+	Barwies Kirche</option>
+	<option value="/motz.html">
+	Mötz-Bahnhaltestelle</option>
+	<option value="http://www.oebb.at">
+	ÖBB-Hauptseite</option>
+	<option selected="" value="#">Bitte Station auswählen</option>
+	</select></p>
+</form>
+<hr />
+<span class="sch-groß">Uhrzeit:
+</span>
+<p id="demo" ></p>
+<script>
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+</body>
+
+</html>

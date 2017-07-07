@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="System" http-equiv="System" />
+<title>Fahrplan-Ibk(WBF)</title>
+<style type="text/css">
+.schrift-mitte {
+	text-align: center;
+}
+</style>
+<meta content="Admin" name="Philipp" />
+</head>
+
+<body style="background-image: url('../railjet_1.jpg'); color: #FF6666;">
+
+<hr />
+<p class="schrift-mitte"><b>Fahrplan Innsbruck-Westbahnhof</b></p>
+<hr />
+<p></p>
+<form name="form">
+	<select name="link" onchange="window.location.href = document.form.link.options[document.form.link.selectedIndex].value;" size="1">
+	<option value="/ibk-hbf.html">
+	Innsbruck Hauptbahnhof</option>
+	<option value="/barwies.html">
+	Barwie Kirche</option>
+	<option value="/motz.html">
+	Mötz-Bahhaltestelle</option>
+	<option selected="" value="#">Bitte Station auswählen</option>
+	</select>
+</form>
+<p></p>
+<hr />
+<table style="width: 100%; height: 334px;">
+	<tr>
+		<td style="width: 564px">Ankunft</td>
+		<td style="width: 564px">Abfahrt</td>
+	</tr>
+	<tr>
+		<td style="width: 564px">
+		<iframe framborder="0" src="http://fahrplan.oebb.at/bin/stboard.exe/dn?L=vs_liveticker&amp;evaId=8100109&amp;boardType=arr&amp;productsFilter=1111111111111111&amp;dirInput=&amp;tickerID=arr&amp;start=yes&amp;eqstops=false&amp;showJourneys=12&amp;additionalTime=0" style="border-style: none; border-color: inherit; border-width: 10px; width: 614px; height: 300px;">
+		</iframe></td>
+		<td>
+		<iframe framborder="0" src="http://fahrplan.oebb.at/bin/stboard.exe/dn?L=vs_liveticker&amp;evaId=8100109&amp;boardType=dep&amp;productsFilter=1111111111111111&amp;dirInput=&amp;tickerID=dep&amp;start=yes&amp;eqstops=false&amp;showJourneys=12&amp;additionalTime=0" style="border-style: none; border-color: inherit; border-width: 10px; width: 614px; height: 300px;">
+		</iframe></td>
+	</tr>
+</table>
+<p></p>
+<hr />
+
+</body>
+
+</html>
